@@ -59,11 +59,11 @@ var testMarkerPink = L.AwesomeMarkers.icon({
             };
 
 // and add it to the map
-    L.geoJSON(geojsonFeaturee, {
-    pointToLayer: function (feature, latlng) {
-    return L.marker(latlng, {icon:testMarkerPink});
-    }
-    ).addTo(mymap).bindPopup("<b>"+geojsonFeature.properties.name+""+geojsonFeature.properties.popupContent+"<b>") .openPopup();
+    L.geoJSON(geojsonFeature, {
+        pointToLayer: function (feature, latlng) {
+        return L.marker(latlng, {icon:testMarkerPink});
+        }
+        }).addTo(mymap).bindPopup("<b>"+geojsonFeature.properties.name+""+geojsonFeature.properties.popupContent+"<b>");
 
 // create a custom popup
     var popup = L.popup();
